@@ -1,10 +1,9 @@
 import java.util.Arrays;
 public class Kadai1 {
     public static void main (String[] args) {
+        int num = 0;
         try {
-            int num = Integer.parseInt(args[0]);
-            catch(ArrayIndexOutOfBoundsException e){System.out.print("引数が指定されていません");}
-            catch (NumberFormatException e){System.out.print("引数が整数ではありません");}
+            num = Integer.parseInt(args[0]);
             int count = 0;
             for (int i = 1; i <= 1000; i++) {
                 System.out.print(i);
@@ -19,6 +18,10 @@ public class Kadai1 {
                 }
             }
             System.out.print("");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.print("引数が指定されていません");
+        } catch (NumberFormatException e) {
+            System.out.print("引数が整数ではありません");
         }
     }
 }
