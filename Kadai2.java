@@ -1,11 +1,17 @@
-import java.util.Arrays;
 import java.io.*;
-import java.nio.file.*;
+import java.nio.charset.Charset;
+import java.nio.file.Path;
 
-public class Kadai2{
+public class Kadai2 {
     public static void main(String[] args) {
-        Path path = Paths.get("Bookindo.csv");
-        try (BufferedReader br = Files.newBufferedReader(path)) {
+        try (
+                BufferedReader br = new BufferedReader(
+                        new FileReader(
+                                "BookInfo.csv",
+                                Charset.forName("MS932")
+                        )
+                )
+        ) {
             String line;
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
@@ -14,4 +20,5 @@ public class Kadai2{
             e.printStackTrace();
         }
     }
+
 }
