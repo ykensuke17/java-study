@@ -9,8 +9,17 @@ public class Kadai2 {
             for (String s: list) {
                 System.out.println(s);
             }
+            ArrayList<Book> booklist = parseToBookList(list);
+
+
+
+
+
+
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }catch (NullPointerException e) {
+            System.out.println("以上です");
         }
         //        try (
 //                BufferedReader br = new BufferedReader(
@@ -42,11 +51,32 @@ public class Kadai2 {
                         Charset.forName("MS932")
                 )
         );
+
+        ArrayList<String> list = new ArrayList<>();
         String line;
         while ((line = br.readLine()) != null) {
             String[] data = line.split(",");
-            System.out.println(line);
+            list.add(line);
         }
+        return list;
+    }
+
+    private static ArrayList<Book> parseToBookList(ArrayList<String> readLine){
+
+
+
+
         return null;
+    }
+
+    private static void displyBookInfo(ArrayList<Book> bookList){
+
+
+
+
+
+
+
+        return;
     }
 }
