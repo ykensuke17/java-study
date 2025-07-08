@@ -11,10 +11,9 @@ public class Kadai2 {
             }
             ArrayList<Book> booklist = parseToBookList(list);
 
-
-
-
-
+            for (Book book : booklist) {
+                System.out.println(book.getTitle());
+            }
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -63,10 +62,13 @@ public class Kadai2 {
 
     private static ArrayList<Book> parseToBookList(ArrayList<String> readLine){
 
-
-
-
-        return null;
+        ArrayList<Book>booklist = new ArrayList<>();
+        for (String s: readLine) {
+            String[] split = s.split(",");
+            Book book = new Book(split[0],split[1],split[2],split[3],split[4]);
+            booklist.add(book);
+        }
+        return booklist;
     }
 
     private static void displyBookInfo(ArrayList<Book> bookList){

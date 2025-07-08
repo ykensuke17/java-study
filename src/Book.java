@@ -8,5 +8,17 @@ public class Book {
     /** 本の返却日 */
     private String returnDate;
     /** 本の価格 */
-    private int price;
+    private String price;
+
+    public Book(String title, String author, String loanDate, String returnDate, String price) {
+        this.title = title;
+        this.author = author;
+        this.loanDate = loanDate;
+        this.returnDate = returnDate;
+        this.price = price;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
 }
