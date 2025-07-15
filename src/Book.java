@@ -21,4 +21,13 @@ public class Book {
     public String getTitle() {
         return this.title;
     }
+
+    public String getAuthor() { return this.author; }
+
+    public String getLoanDate() { return this.loanDate; }
+
+    public String getReturnDate() { return this.returnDate; }
+
+    public String getPrice() { return this.price; }
+
 }

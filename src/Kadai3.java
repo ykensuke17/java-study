@@ -1,8 +1,10 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 
-public class Kadai2 {
+public class Kadai3 {
     public static void main(String[] args) {
         try {
             ArrayList<String> list = fileRead("BookInfo.csv");
