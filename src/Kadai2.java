@@ -49,7 +49,7 @@ public class Kadai2 {
         BufferedReader br = new BufferedReader(
                 new FileReader(
                         filePath,
-                        Charset.forName("MS932")
+                        Charset.forName("UTF-8")
                 )
         );
 
