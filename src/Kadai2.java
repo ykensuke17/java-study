@@ -6,9 +6,9 @@ public class Kadai2 {
     public static void main(String[] args) {
         try {
             ArrayList<String> list = fileRead("BookInfo.csv");
-            for (String s: list) {
-                System.out.println(s);
-            }
+//            for (String s: list) {
+//                System.out.println(s);
+//            }
             ArrayList<Book> booklist = parseToBookList(list);
 
 //            for (Book book : booklist) {

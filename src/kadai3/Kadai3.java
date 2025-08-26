@@ -13,20 +13,23 @@ import java.util.Date;
 public class Kadai3 {
     public static void main(String[] args) {
         try {
-            ArrayList<String> list = fileRead("BookInfo.csv");
-            for (String s: list) {
-                System.out.println(s);
-            }
+            ArrayList<String> list = fileRead("./src/kadai3/BookInfo.csv");
+//            for (String s: list) {
+//                System.out.println(s);
+//            }
             ArrayList<Book> booklist = parseToBookList(list);
 
             for (Book book : booklist) {
                 book.displayBookInfo();
             }
 
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }catch (NullPointerException e) {
             System.out.println("以上です");
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -34,7 +37,7 @@ public class Kadai3 {
         BufferedReader br = new BufferedReader(
                 new FileReader(
                         filePath,
-                        Charset.forName("UTF-8")
+                        Charset.forName("MS932")
                 )
         );
 
@@ -53,7 +56,7 @@ public class Kadai3 {
         for (String s: readLine) {
             String[] split = s.split(",",-1);
 
-            SimpleDateFormat dateFormat = new SimpleDateFormat("MM月dd日");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy年MM月dd日");
             Date loneDate = dateFormat.parse(split[2]);
             Calendar loneCalendar = Calendar.getInstance();
             loneCalendar.setTime(loneDate);
