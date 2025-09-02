@@ -30,4 +30,11 @@ public class UnreturnedBook extends Book {
                 )
         );
     }
+/** ↓追加課題途中 */
+//    public void extension(int num){
+//        super(title, author, loanDate, price);
+//
+//    }
+
+
 }

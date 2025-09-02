@@ -24,6 +24,8 @@ public class Kadai3 {
             }
 
 
+
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }catch (NullPointerException e) {
